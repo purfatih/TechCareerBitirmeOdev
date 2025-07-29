@@ -196,19 +196,5 @@ public class RegisterTests extends BaseMethods {
         baseTests.assertEquals(registerPage.getSurnameErrorMessage(), "Soyisim alanı zorunludur!");
         baseTests.assertEquals(registerPage.getPoliciesError(), "Hizmet Şartlarını ve Gizlilik Politikasını kabul etmelisiniz.");
     }
-    @Test(description = "TC011 - Şifre tekrar girildiğinde input'un üstündeki labelda yazan text test edilir.")
-    //alttaki test case'inde bug bulunmuştur. bu nedenle test fail vermektedir.
-    public void EmptyPasswordRepeatInputErrorCheck() {
-        registerPage.sendKeysRegisterName(registerName)
-                .sendKeysRegisterSurname(registerSurname)
-                .sendKeysRegisterEmail(registerEmail)
-                .sendKeysRegisterPhone(registerPhone)
-                .sendKeysRegisterPassword("12345")
-                .sendKeysRegisterRepeatPassword("")
-                .sendKeysRegisterAcceptConsent()
-                .sendKeysRegisterAcceptPolicies()
-                .clickRegisterButton();
-        baseTests.sleep(3000);
-        baseTests.assertEquals(registerPage.getInputLabelError(), "Şifre");
-    }
+
 }

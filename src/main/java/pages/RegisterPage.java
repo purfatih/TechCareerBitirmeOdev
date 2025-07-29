@@ -125,10 +125,4 @@ public class RegisterPage extends BaseMethods {
         screenshot();
         return text;
     }
-    @Step("Şifre tekrar alanı boş bırakılır ise inputun üstteki label'i 'Şifre' olarak kalmalıdır. Farklı bir metin olur ise hata alınır.")
-    public String getInputLabelError() {
-        String text = driver.findElement(By.id(":r5:-label")).getText();
-        screenshot();
-        return text;
-    }
 }
