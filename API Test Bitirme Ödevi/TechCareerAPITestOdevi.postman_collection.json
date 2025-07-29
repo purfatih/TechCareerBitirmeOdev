@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "857967dc-16d9-47ba-9b89-034bdcfcc3ba",
+		"name": "TechCareerAPITestOdevi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44306866"
+	},
+	"item": [
+		{
+			"name": "Kullanıcı İşlemleri",
+			"item": [
+				{
+					"name": "Kullanıcı Oluşturma",
+					"item": [
+						{
+							"name": "Kullanıcı Oluşturma",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 12345,\n  \"username\": \"fatihnuripurr\",\n  \"firstName\": \"fatih\",\n  \"lastName\": \"pur\",\n  \"email\": \"fatihnuripur@gmaill.com\",\n  \"password\": \"1234567890.\",\n  \"phone\": \"05358514658\",\n  \"userStatus\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v2/user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kullanıcı Oluşturma 2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 123456,\n  \"username\": \"fatihnuripur2\",\n  \"firstName\": \"fatih2\",\n  \"lastName\": \"pur2\",\n  \"email\": \"fatihnuripur2@gmaill.com\",\n  \"password\": \"1234567890..\",\n  \"phone\": \"053585146580\",\n  \"userStatus\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v2/user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Kullanıcı Güncelleme",
+					"item": [
+						{
+							"name": "Kullanıcı Güncelleme",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 12345,\n  \"username\": \"fatihnuripur1\",\n  \"firstName\": \"fatih1\",\n  \"lastName\": \"pur1\",\n  \"email\": \"fnp@gmail.com\",\n  \"password\": \"12345\",\n  \"phone\": \"11111111111\",\n  \"userStatus\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v2/user/fatihnuripur",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user",
+										"fatihnuripur"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kullanıcı Güncelleme 2",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 123456,\n  \"username\": \"fatihnuripur3\",\n  \"firstName\": \"fatih11\",\n  \"lastName\": \"pur11\",\n  \"email\": \"fnp@gmail.com\",\n  \"password\": \"12345\",\n  \"phone\": \"11111111111\",\n  \"userStatus\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v2/user/fatihnuripur2",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user",
+										"fatihnuripur2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Kullanıcı Silme",
+					"item": [
+						{
+							"name": "Kullanıcı Silme",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/v2/user/fatihnuripur1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user",
+										"fatihnuripur1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kullanıcı Silme 2",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/v2/user/fatihnuripur3",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user",
+										"fatihnuripur3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Giriş Yapma",
+					"item": [
+						{
+							"name": "Giriş Yapma",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/v2/user/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user",
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "fatihnuripurr",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "1234567890.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Giriş Yapma 2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/v2/user/login",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user",
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "fatihpur2",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "1234567890..",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Çıkış Yapma",
+					"item": [
+						{
+							"name": "Çıkış Yapma",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/v2/user/logout",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v2",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://petstore.swagger.io",
+			"type": "default"
+		}
+	]
+}
