@@ -1,10 +1,5 @@
 package Data;
-
-import org.openqa.selenium.WebDriver;
-
 public class Data {
-    public static WebDriver driver;
-
     public String registerName = "TestName";
     public String registerSurname = "TestSurname";
     public String registerEmail = "3otomasyontest3@gmail.com";

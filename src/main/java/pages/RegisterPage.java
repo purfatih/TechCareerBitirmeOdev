@@ -6,12 +6,12 @@ import io.qameta.allure.testng.AllureTestNg;
 import org.openqa.selenium.By;
 import org.testng.annotations.Listeners;
 @Listeners({AllureTestNg.class})
-public class RegisterPage extends BaseMethods {
-
+public class RegisterPage extends BaseMethods <RegisterPage>  {
     @Step("Üyelik kaydı için isim alanı doldurulur.")
     public RegisterPage sendKeysRegisterName(String text) {
         driver.findElement(By.id(":r0:")).sendKeys(text);
         return this;
+
     }
 
     @Step("Üyelik kaydı için soyisim alanı doldurulur.")
